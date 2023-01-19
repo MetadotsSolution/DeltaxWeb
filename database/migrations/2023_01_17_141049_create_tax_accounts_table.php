@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('tax_accounts', function (Blueprint $table) {
             $table->id();
-            $table>foreignIdFor(User::class);
+            $table->foreignIdFor(User::class);
             $table->string('acc_type')->nullable();
             $table->string('name')->nullable();
             $table->string('gender')->nullable();

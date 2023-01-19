@@ -9,6 +9,16 @@ class TaxAccount extends Model
 {
     use HasFactory;
 
+    public function taxes()
+    {
+        return $this->hasMany(Tax::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 
 }
  
