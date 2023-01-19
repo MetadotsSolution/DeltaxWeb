@@ -50,6 +50,7 @@ class RegisterController extends Controller
             'company_address' => 'required',
         ]);
         DB::beginTransaction();
+        // I don deploy
 
         $corpUser = User::create([
             'acc_type' => $request->input('acc_type'),
