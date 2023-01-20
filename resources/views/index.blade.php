@@ -250,7 +250,7 @@
         </section> --}}
 
         <!--====================FAQS=============================-->
-<section class="faqs">
+{{-- <section class="faqs">
 <h2 class="sub-header">Frequently Asked Questions</h2>
 <div class="faq">
 
@@ -333,7 +333,7 @@
    
   </div>
 </div>
-</section>
+</section> --}}
 <!--===================End of FAQS===============-->
 
         <!-- Call To Action -->

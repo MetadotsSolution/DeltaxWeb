@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\api;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
@@ -103,7 +106,7 @@ class AuthController extends Controller
                 "lga" => $request->lga,
                 "company_phone" => $request->company_phone,
                 "corporate_name" => $request->corporate_name,
-                "company_address" => $request->company_address,
+                "company_address" => $request->company_addressweb,
             ]);
     
            return response()->json([

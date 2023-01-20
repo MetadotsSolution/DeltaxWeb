@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\CorperateAccountController;
-use App\Http\Controllers\IndividualAccountController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,16 +26,16 @@ Route::get('/', [FrontController::class, 'index']);
 
 
 Route::middleware(['guest'])->group(function () {
-    Route::get('registerIndividual', [FrontController::class, 'registerIndividual'])->name('registerIndividual');
-    Route::post('registerIndividual', [IndividualAccountController::class, 'store'])->name('registerInd');
+    Route::get('registerIndividual', [RegisterController::class, 'registerIndividual'])->name('registerIndividual');
+    Route::post('registerIndividual', [RegisterController::class, 'store'])->name('registerInd');
 
-    Route::get('registerCorperation', [FrontController::class, 'registerCorperation'])->name('registerCorperation');
-    Route::post('registerCorperation', [CorperateAccountController::class, 'store'])->name('registerCop');
+    Route::get('registerCorperation', [RegisterController::class, 'registerCorperation'])->name('registerCorperation');
+    Route::post('registerCorperation', [RegisterController::class, 'store'])->name('registerCop');
 
-    Route::get('login', [FrontController::class, 'loginIndividual'])->name('login');
-    Route::post('login', [IndividualAccountController::class, 'loginUser'])->name('loginUser');
+    Route::get('login', [RegisterController::class, 'loginIndividual'])->name('login');
+    Route::post('login', [RegisterController::class, 'loginUser'])->name('loginUser');
 
-    Route::get('loginCorperation', [FrontController::class, 'loginCorperation'])->name('loginCorperation');
+    Route::get('loginCorperation', [RegisterController::class, 'loginCorperation'])->name('loginCorperation');
 });
 
 Route::middleware('auth')->group(function () {
