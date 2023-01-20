@@ -87,7 +87,7 @@ class AuthController extends Controller
                     'errors' => $validateRequest->errors()
                 ], 401);
             }
-            $corpUser = User::create([
+            $corp_User = User::create([
                 "acc_type" => $request->acc_type,
                 "gender" => $request->gender,
                 "status" => $request->status,
@@ -112,8 +112,8 @@ class AuthController extends Controller
            return response()->json([
             'status' => true,
             'message' => 'Account Created Successfully',
-            'data' => $corpUser,
-            'token' => $corpUser->createToken("API TOKEN")->plainTextToken
+            'data' => $corp_User,
+            'token' => $corp_User->createToken("API TOKEN")->plainTextToken
            ]);
         } catch (\Throwable $th) {
                 return response()->json([
