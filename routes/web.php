@@ -26,11 +26,11 @@ Route::get('/', [FrontController::class, 'index']);
 
 
 Route::middleware(['guest'])->group(function () {
-    Route::get('registerIndividual', [RegisterController::class, 'registerIndividual'])->name('registerIndividual');
-    Route::post('registerIndividual', [RegisterController::class, 'store'])->name('registerInd');
+    // Route::get('registerIndividual', [RegisterController::class, 'registerIndividual'])->name('registerIndividual');
+    // Route::post('registerIndividual', [RegisterController::class, 'store'])->name('registerInd');
 
-    Route::get('registerCorperation', [RegisterController::class, 'registerCorperation'])->name('registerCorperation');
-    Route::post('registerCorperation', [RegisterController::class, 'store'])->name('registerCop');
+    // Route::get('registerCorperation', [RegisterController::class, 'registerCorperation'])->name('registerCorperation');
+    // Route::post('registerCorperation', [RegisterController::class, 'store'])->name('registerCop');
 
     Route::get('login', [RegisterController::class, 'loginIndividual'])->name('login');
     Route::post('login', [RegisterController::class, 'loginUser'])->name('loginUser');
