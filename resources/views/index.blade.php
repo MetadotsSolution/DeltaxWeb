@@ -408,12 +408,12 @@
             <p class="footer-heading">Contact us</p>
             <address class="contacts">
               <p class="address">
-                623 Harrison St., 2nd Floor, San Francisco, CA 94107
+                DSIHUB, okpanam Road, besides Zenith Bank
               </p>
               <p>
-                <a class="footer-link" href="tel:415-201-6370">415-201-6370</a
+                <a class="footer-link" href="tel:2348053445575">+2348053445575</a
                 ><br />
-                <a class="footer-link" href="mailto:hello@omnifood.com"
+                <a class="footer-link" href="mailto:metadots@ictyepprojects.com"
                   >metadots@ictyepprojects.com</a
                 >
               </p>

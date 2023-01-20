@@ -124,4 +124,86 @@ class AuthController extends Controller
         }
         
     }
+
+     /**
+    * @param Request $request
+    * @return User
+    */
+    public function loginInd(Request $request)
+    {
+        try {
+            $validateUserInd = Validator::make(
+                $request->all(),
+                [
+                    'email' => 'required|email',
+                    'password' => 'required',
+                ]
+            );
+            if ($validateUserInd->fails()) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'validation error',
+                    'errors' => $validateUserInd->errors()
+                ], 401);
+            }
+            if(!Auth::attempt($request->only(['email', 'password']))){
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Email & Password does not match with our record.'], 401);
+            }
+            $indUser = User::where('email', $request->email)->first();
+
+            return response()->json([
+                'status' => true,
+                'message' => 'User Logged in successfully',
+                'token' => $indUser->createToken("API TOKEN")->plainTextToken], 200);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => false,
+                'message' => $th->getMessage()
+            ], 500);
+        }
+    }
+
+     /**
+    * @param Request $request
+    * @return User
+    */
+    public function loginCorp(Request $request)
+    {
+        try {
+            $validateUserCorp = Validator::make(
+                $request->all(),
+                [
+                    'email' => 'required|email',
+                    'password' => 'required',
+                ]
+            );
+            if ($validateUserCorp->fails()) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'validation error',
+                    'errors' => $validateUserCorp->errors()
+                ], 401);
+            }
+            if(!Auth::attempt($request->only(['email', 'password']))){
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Email & Password does not match with our record.'], 401);
+            }
+            $corp_User = User::where('email', $request->email)->first();
+
+            return response()->json([
+                'status' => true,
+                'message' => 'User Logged in successfully',
+                'token' => $corp_User->createToken("API TOKEN")->plainTextToken], 200);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => false,
+                'message' => $th->getMessage()
+            ], 500);
+        }
+    }
+
+
 }

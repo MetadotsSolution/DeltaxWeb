@@ -20,7 +20,10 @@ use App\Http\Controllers\CorperateAccountController;
 
 
 Route::post('registerIndividual', [AuthController::class, 'createInd'])->name('registerInd');
-Route::post('registerCorperation', [CorperateAccountController::class, 'store'])->name('registerCop');
+Route::post('registerCorperation', [CorperateAccountController::class, 'createCorp'])->name('registerCop');
+
+Route::post("loginInd", [AuthController::class, 'loginInd']);
+Route::post("loginCorp", [AuthController::class, 'loginCorp']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
