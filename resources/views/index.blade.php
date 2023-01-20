@@ -423,10 +423,10 @@
           <nav class="nav-col">
             <p class="footer-heading">Account</p>
             <ul class="footer-nav">
-              <li><a class="footer-link"  href="{{ route('registerIndividual') }}" target="_blank" id="Register">Register (Individual)</a></li>
-              <li><a class="footer-link"  href="{{ route('registerCorperation') }}" target="_blank">Register (Corperation)</a></li>
-              <li><a class="footer-link" href="{{ route('login') }}">Login (Individual)</a></li>
-              <li><a class="footer-link" href="{{ route('loginCorperation') }}">Login (Corperation)</a></li>
+              <li><a class="footer-link"  href="#" target="_blank" id="Register">Register (Individual)</a></li>
+              <li><a class="footer-link"  href="#" target="_blank">Register (Corperation)</a></li>
+              <li><a class="footer-link" href="#">Login (Individual)</a></li>
+              <li><a class="footer-link" href="#">Login (Corperation)</a></li>
               {{-- <li><a class="footer-link" href="#">iOS app</a></li>
               <li><a class="footer-link" href="#">Android app</a></li>
             </ul> --}}
