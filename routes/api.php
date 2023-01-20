@@ -2,8 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\api\AuthController;
 use App\Http\Controllers\api\Validator;
+use App\Http\Controllers\api\AuthController;
+use App\Http\Controllers\CorperateAccountController;
 
 
 /*
@@ -19,7 +20,7 @@ use App\Http\Controllers\api\Validator;
 
 
 Route::post('registerIndividual', [AuthController::class, 'createInd'])->name('registerInd');
-Route::post('registerCorperation', [AuthController::class, 'createCorp'])->name('registerCop');
+Route::post('registerCorperation', [CorperateAccountController::class, 'store'])->name('registerCop');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
