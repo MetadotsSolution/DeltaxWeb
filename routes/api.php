@@ -19,7 +19,7 @@ use App\Http\Controllers\api\Validator;
 
 
 Route::post('registerIndividual', [AuthController::class, 'createInd'])->name('registerInd');
-Route::post('registerCorperation', [AuthController::class, 'store'])->name('registerCop');
+Route::post('registerCorperation', [AuthController::class, 'createCorp'])->name('registerCop');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
