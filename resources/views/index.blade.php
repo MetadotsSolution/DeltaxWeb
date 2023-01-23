@@ -51,8 +51,8 @@
                 where they can easily pay their taxes with a fast and secured App.
                 DELTAX is a one of a kind App that anyone can easily navigate through
                 to perform their civic responsibility.
-              </p>
-              <img src="{{ asset('images/android.png') }}" alt="" class="margin-right-sm">
+              </p> 
+              <a href="https://drive.google.com/open?id=1FFAwBWj3IYk9E9xq0XWy5YNisWnKFPbt&authuser=fegoek7%40gmail.com&usp=drive_fs"> <img src="{{ asset('images/android.png') }}" alt=""> </a>
               <img src="{{ asset('images/apple.png') }}" alt="">
 
               <div class="delivered-meals">
@@ -353,7 +353,7 @@
                   </div>
   
                   <div>
-                   <img src="{{ asset('images/android.png') }}" alt="">
+                  <a href="https://drive.google.com/open?id=1FFAwBWj3IYk9E9xq0XWy5YNisWnKFPbt&authuser=fegoek7%40gmail.com&usp=drive_fs"> <img src="{{ asset('images/android.png') }}" alt=""> </a>
                   </div>
   
   

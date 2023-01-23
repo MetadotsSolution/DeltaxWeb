@@ -29,7 +29,7 @@
 
     <title>Dashboard </title>
 
-    <meta name="description" content="" />
+    <meta name="description" content="" /> 
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
