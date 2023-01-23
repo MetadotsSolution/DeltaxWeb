@@ -30,7 +30,7 @@
               </button>
               
             </li> --}}
-            <li><a class="main-nav-link nav-cta" href="#Register">Sign up</a></li>
+            {{-- <li><a class="main-nav-link nav-cta" href="#Register">Sign up</a></li> --}}
             <li><a class="main-nav-link nav-cta" href="#Register">Sign In</a></li>
           </ul>
         </nav>
@@ -111,7 +111,7 @@
             <div class="step-img-box">
               <img
                 src="{{ asset('images/screen.png') }}"
-                class="step-img"
+                class="step-img hidden"
                 alt="iPhone app
               preferences selection screen"
               />
@@ -121,7 +121,7 @@
             <div class="step-img-box">
               <img
                 src="{{ asset('images/3.png') }}"
-                class="step-img"
+                class="step-img hidden"
                 alt="iPhone app
                 screen"
               />
@@ -151,7 +151,7 @@
             <div class="step-img-box">
               <img
                 src="{{ asset('images/2.png') }}"
-                class="step-img"
+                class="step-img hidden"
                 alt="iPhone app
               "
               />
@@ -364,7 +364,7 @@
               </div>
 
               <div
-                class="cta-img-box"
+                class="cta-img-box hidden"
                 role="img"
                 aria-label="Woman "
               ><img src="{{ asset('images/Vectary.png') }}" alt=""></div>
@@ -423,13 +423,11 @@
           <nav class="nav-col">
             <p class="footer-heading">Account</p>
             <ul class="footer-nav">
-              <li><a class="footer-link"  href="#" target="_blank" id="Register">Register (Individual)</a></li>
-              <li><a class="footer-link"  href="#" target="_blank">Register (Corperation)</a></li>
-              <li><a class="footer-link" href="#">Login (Individual)</a></li>
-              <li><a class="footer-link" href="#">Login (Corperation)</a></li>
-              {{-- <li><a class="footer-link" href="#">iOS app</a></li>
+              <li><a class="footer-link"  href="#" target="_blank">Create Account</a></li>
+              <li><a class="footer-link" href="#">Sign in</a></li>
+              <li><a class="footer-link" href="#">iOS app</a></li>
               <li><a class="footer-link" href="#">Android app</a></li>
-            </ul> --}}
+            </ul>
           </nav>
   
           <nav class="nav-col">

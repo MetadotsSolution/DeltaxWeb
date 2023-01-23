@@ -43,7 +43,7 @@
                                     <div class="text-center">
                                         <h4 class="text-dark mb-4">Welcome Back!</h4>
                                     </div>
-                                    <form class="user" method="POST" action="{{ route('loginUser') }}" enctype="multipart/form-data">
+                                    <form class="user" method="POST" action="" enctype="multipart/form-data">
                                         @csrf
                                         <div class="mb-3"><input class="form-control form-control-user" type="email"  placeholder="Enter Email Address..." name="email"></div>
                                         <div class="mb-3"><input class="form-control form-control-user" type="password"  placeholder="Password" name="password"></div>

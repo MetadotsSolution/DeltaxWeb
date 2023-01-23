@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminAccountController;
 
 
 /*
@@ -26,19 +27,17 @@ Route::get('/', [FrontController::class, 'index']);
 
 
 Route::middleware(['guest'])->group(function () {
-    // Route::get('registerIndividual', [RegisterController::class, 'registerIndividual'])->name('registerIndividual');
-    // Route::post('registerIndividual', [RegisterController::class, 'store'])->name('registerInd');
-
-    // Route::get('registerCorperation', [RegisterController::class, 'registerCorperation'])->name('registerCorperation');
-    // Route::post('registerCorperation', [RegisterController::class, 'store'])->name('registerCop');
-
-    Route::get('login', [RegisterController::class, 'loginIndividual'])->name('login');
-    Route::post('login', [RegisterController::class, 'loginUser'])->name('loginUser');
-
-    Route::get('loginCorperation', [RegisterController::class, 'loginCorperation'])->name('loginCorperation');
+    Route::get('login', [AdminAccountController::class, 'login'])->name('login');
+    Route::post('login', [AdminAccountController::class, 'loginAdmin'])->name('loginAdmin');
+    
+    Route::get('table', [FrontController::class, 'table']);
 });
+
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('home', [DashboardController::class, 'home'])->name('home');
+    Route::get('dashboard', [DashboardController::class, 'dashboard']);
 });
-

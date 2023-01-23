@@ -10,7 +10,7 @@ const h1 = document.querySelector(".heading-primary");
 // Set current year
 
 ///////////////////////////////////////////////////////////
-// Make mobile navigation work
+// Make mobile navigation work 
 
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
@@ -111,3 +111,16 @@ faqs.forEach(faq=>{
 
     })
 })
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add('show');
+        } else{
+            entry.target.classList.remove('show');
+        }
+    })
+});
+
+const hidEle = document.querySelectorAll('.hidden');
+hidEle.forEach((el) => observer.observe(el));

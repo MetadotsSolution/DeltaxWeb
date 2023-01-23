@@ -25,10 +25,17 @@ class FrontController extends Controller
     public function loginIndividual() 
     {
         return view('login.individual');
-    }
+    } 
 
     public function loginCorperation() 
     {
         return view('login.corperate');
     }
+
+    public function loginAdmin() 
+    {
+        return view('login.admin');
+    }
+
+  
 }

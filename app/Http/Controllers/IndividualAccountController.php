@@ -95,7 +95,7 @@ class IndividualAccountController extends Controller
                 'password' => 'required'
                 ]
             );
-            // dd($request->all());
+            // dd($request->all()); 
 
         if (!Auth::attempt($request->only(['email', 'password']))) {
             return redirect()->back()->withErrors(['email'=>'Invalid username or password']);
